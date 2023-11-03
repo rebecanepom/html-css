@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronauta</title>
+    <link rel="shortcut icon" href="Jin-astronauta.jpg" type="image/x-icon">
     <style>
         body {
             height: 100vh;
-            background-attachment: fixed;
-
-            background-color: black;
-            background-image: url('espaco.jpg');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
+            background: black url('espaco.jpg') center center /cover no-repeat fixed;
         }
 
         div {
-            background-image: url('astronauta.png');
-            
+            height: 80vh;
+            background: url('astronauta.png') center center /contain no-repeat fixed;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-10px);
+            }
+            100%{
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <div>
+    <div onclick="musica()">
 
     </div>
+    
+    <script>
+        function musica() {
+            var audio = new Audio('The Astronaut-Jin.mp3');
+            audio.play();
+            
+        }
+    </script>
 </body>
 </html>
