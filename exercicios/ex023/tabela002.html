@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -19,6 +20,7 @@
             padding: 10px;
         }
 
+        /*LEGENDA DA TABELA*/
         caption {
             font-size: 1.5em;
             font-weight: bold;
@@ -31,6 +33,28 @@
             color: white;
         }
 
+        /*CABEÇALHO FIXO*/
+        thead > tr > th { /*ou apenas thead já q o th sempre estara dentro do thead*/
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        /*EFEITO VISUAL NOS DADOS PRA QND PASSAR O MOUSE*/
+        tbody > tr:hover {
+            border: 1.5px solid rgb(23, 9, 226);
+            font-weight: bolder;
+        }
+
+        /*EFEITO ZEBRADO*/
+        tbody tr:nth-child(odd) { /*ou 2n-1*/
+            background-color: pink;
+        }
+        tbody tr:nth-child(even) { /*ou 2n*/
+            background-color: lightgray;
+        }
+
+        /*alinhamento dos dados da população*/
         td.num { /*ou pode tbm: td:nth-child(2) {}*/
             text-align: right;
         }
@@ -174,5 +198,6 @@
             </tr>
         </tfoot>
     </table>
+    
 </body>
 </html>
