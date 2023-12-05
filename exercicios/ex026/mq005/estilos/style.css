@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
@@ -19,8 +21,22 @@ header > h1 {
     text-align: center;
 }
 
-nav {
+i#burguer {
+    background-color: #5850fc;
+    color: white;
     display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+i#burguer:hover {
+    background-color: #9d8bf7b9;
+    color: black;
+}
+
+nav {
+    display: none;
 }
 
 nav > ul {
@@ -34,7 +50,7 @@ nav a {
     text-align: center;
     background-color: #AE7DFF;
     color: white;
-    border-top: 2px solid gray;
+    border-top: 2px solid #847DFF;
 }
 
 nav a:hover {
