@@ -6,16 +6,17 @@
     <title>Astronauta</title>
     <link rel="shortcut icon" href="Jin-astronauta.jpg" type="image/x-icon">
     <style>
-        body {
+        body { /*Espaço*/
             height: 100vh;
             background: black url('espaco.jpg') center center /cover no-repeat fixed;
         }
 
-        div {
+        div { /*Astronauta*/
             height: 80vh;
             background: url('astronauta.png') center center /contain no-repeat fixed;
             animation: float 3s ease-in-out infinite;
-        }
+        } 
+        /*animação do astronauta*/
         @keyframes float{
             0%{
                 transform: translateY(0);
@@ -31,11 +32,12 @@
 </head>
 <body>
     <div onclick="musica()">
-
+        <!--Astronauta-->
     </div>
     
     <script>
         function musica() {
+            /*A musica bugou mas um dia aprendo concertar*/
             var audio = new Audio('The Astronaut-Jin.mp3');
             audio.play();
             
